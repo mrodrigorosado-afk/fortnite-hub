@@ -1,0 +1,8 @@
+{
+  "framework": "vite",
+  "installCommand": "npm install",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "rewrites": [{ "source": "/api/:path*", "destination": "https://fortnite-api.com/v2/:path*" }],
+  "headers": [{ "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "public, s-maxage=300, stale-while-revalidate=600" }] }]
+}
